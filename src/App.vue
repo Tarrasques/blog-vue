@@ -147,6 +147,27 @@ a {
     font-size: 30px;
     font-weight: 700;
 }
+//置顶图标
+.s-top{
+  position: absolute;
+  top:-20px;
+  right:-15px;
+  height:60px;
+  width:70px;
+  padding-top:10px;
+  border-radius: 100px;
+  color:#ffffff;
+  background: @tcolors;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+.s-top span{
+  text-align: center;
+  display: block;
+}
+.s-top .word{
+  font-size: 25px;
+  font-weight: 600;
+}
 // 相同的标题副标题
 .tcommonBox{
     white-space: normal;

@@ -8,6 +8,11 @@
                 <span class="day" v-html="showInitDate(item.createTime,'date')"></span>
             </span>
             <header>
+              <span class="s-top" v-if="item.isTop=='1'">
+                  <span class="word">
+                    置顶
+                  </span>
+              </span>
                 <h1>
                     <a :href="'#/DetailArticle?aid='+item.id" target="_blank">
                         {{item.title}}
