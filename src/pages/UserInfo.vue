@@ -17,6 +17,7 @@
                               class="avatar-uploader"
                               name="img"
                               :action="uploadURL"
+                              :headers="token"
                               :show-file-list="false"
                               :on-success="handleAvatarSuccess"
                               :before-upload="beforeAvatarUpload">
@@ -79,7 +80,7 @@
                             <span>{{userInfoObj.sex==0?'男':'女'}}</span>
                         </li>
 
-                     
+
                     </ul>
 
                 </section>
@@ -92,7 +93,8 @@
 import header from '../components/header.vue'
 import {getUserInfo,savaUserInfo} from '../api/user.js'//获取用户信息，保存用户信息
 import store from '../store'
-    export default {
+import {getToken} from "../utils/auth";
+export default {
         name: 'UserInfo',
         data() { //选项 / 数据
             return {
@@ -100,6 +102,9 @@ import store from '../store'
                 isEdit: false,
                 userInfo:{},//本地存储的用户信
                 userInfoObj:'',//用户的信息
+                token:{
+                  token : getToken()
+                }
             }
         },
         methods: { //事件处理器
