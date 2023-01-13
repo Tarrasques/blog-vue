@@ -3,6 +3,18 @@
       <keep-alive :include="['Aboutme', 'Message', 'FriendsLink', 'Reward']">
           <router-view></router-view>
       </keep-alive>
+    <div
+      style="position:fixed;text-align:center;bottom:0;margin:0 auto;width:100%;color: #5c6b77"
+    >
+
+      ©2022-2023阿林&nbsp;|&nbsp;
+      <a
+        target="_blank"
+        style="color: #5c6b77"
+        href="https://beian.miit.gov.cn/"
+      >渝ICP备2022010468号-1</a
+      >
+    </div>
   </div>
 </template>
 
